@@ -52,13 +52,22 @@ static Alcatraz *sharedPlugin;
 - (id)initWithBundle:(NSBundle *)plugin {
     if (self = [super init]) {
         self.bundle = plugin;
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-
-            [self createMenuItem];
-        }];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(xcodeDidFinishLaunching:)
+                                                     name:NSApplicationDidFinishLaunchingNotification
+                                                   object:nil];
         [self updateAlcatraz];
     }
     return self;
+}
+
+- (void)xcodeDidFinishLaunching: (NSNotification *) notification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:NSApplicationDidFinishLaunchingNotification
+                                                  object:nil];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self createMenuItem];
+    }];
 }
 
 #pragma mark - Private
@@ -76,14 +85,10 @@ static Alcatraz *sharedPlugin;
 }
 
 - (void)checkForCMDLineToolsAndOpenWindow {
-    if ([self hasNSURLSessionAvailable]) {
-        if ([ATZGit areCommandLineToolsAvailable])
-            [self loadWindowAndPutInFront];
-        else
-            [self presentAlertWithMessageKey:@"CMDLineToolsWarning"];
-    } else {
-        [self presentAlertWithMessageKey:@"MavericksOnlyWarning"];
-    }
+    if ([ATZGit areCommandLineToolsAvailable])
+        [self loadWindowAndPutInFront];
+    else
+        [self presentAlertWithMessageKey:@"CMDLineToolsWarning"];
 }
 
 - (void)loadWindowAndPutInFront {
@@ -92,10 +97,6 @@ static Alcatraz *sharedPlugin;
 
     [[self.windowController window] makeKeyAndOrderFront:self];
     [self.windowController reloadPackages:nil];
-}
-
-- (BOOL)hasNSURLSessionAvailable {
-    return NSClassFromString(@"NSURLSession") != nil;
 }
 
 - (void)presentAlertWithMessageKey:(NSString *)messageKey {

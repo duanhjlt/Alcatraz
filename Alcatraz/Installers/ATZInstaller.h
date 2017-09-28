@@ -31,6 +31,13 @@ static NSString *const DOWNLOADING_FORMAT = @"Downloading %@...";
 static NSString *const INSTALLING_FORMAT = @"Installing %@...";
 static NSString *const UPDATING_FORMAT = @"Updating %@...";
 
+static NSString *const ATZInstallerErrorDomain = @"ATZInstallerErrorDomain";
+NS_ENUM(NSInteger)
+{
+    ATZInstallerXcodeProjectNotFoundError = 666,
+    ATZInstallerBundleNotFoundError = 669
+};
+
 @interface ATZInstaller : NSObject
 
 + (instancetype)sharedInstaller;
@@ -39,9 +46,7 @@ static NSString *const UPDATING_FORMAT = @"Updating %@...";
                                            completion:(void(^)(NSError *error))completion;
 - (void)updatePackage:(ATZPackage *)package progress:(void(^)(NSString *progressMessage, CGFloat progress))progress
                                           completion:(void(^)(NSError *error))completion;
-- (void)removePackage:(ATZPackage *)package
-           completion:(void(^)(NSError *error))completion;
-
+- (void)removePackage:(ATZPackage *)package completion:(void(^)(NSError *error))completion;
 
 - (BOOL)isPackageInstalled:(ATZPackage *)package;
 - (NSString *)pathForDownloadedPackage:(ATZPackage *)package;

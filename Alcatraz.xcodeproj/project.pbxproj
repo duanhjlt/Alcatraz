@@ -57,7 +57,9 @@
 		8AD5249F174102F9008B451F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AD524A2174102F9008B451F /* Localizable.strings */; };
 		8ADC22341A2AD5B800DB7BCA /* ATZPreviewImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ADC22331A2AD5B800DB7BCA /* ATZPreviewImageButton.m */; };
 		8AF670C919C2DE8A00E1C168 /* ATZSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF670C819C2DE8A00E1C168 /* ATZSegmentedControl.m */; };
+		F07E55521B551BA800161E61 /* ATZXcodePrefsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F07E55511B551BA800161E61 /* ATZXcodePrefsManager.m */; };
 		F0DF961E1B40416400DF68CC /* ATZSegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DF961D1B40416400DF68CC /* ATZSegmentedCell.m */; };
+		FE4405531D6E3635000C58A4 /* NSImage+Alcatraz.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4405521D6E3635000C58A4 /* NSImage+Alcatraz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +68,6 @@
 		0C7AF64F186B4E890064EE7B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		32BDEBC2173A46A900513A7C /* eye_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye_icon.png; sourceTree = "<group>"; };
 		32D86503173A4555009C724B /* eye_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eye_icon@2x.png"; sourceTree = "<group>"; };
-		6449530218CE826C009494BD /* ATZVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATZVersion.h; sourceTree = "<group>"; };
 		64EDC500188CB55A00D45F1D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		890A4B3F171F031300AFE577 /* Alcatraz.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Alcatraz.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		890A4B42171F031300AFE577 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -144,8 +145,12 @@
 		8ADC22331A2AD5B800DB7BCA /* ATZPreviewImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATZPreviewImageButton.m; path = Views/ATZPreviewImageButton.m; sourceTree = "<group>"; };
 		8AF670C719C2DE8A00E1C168 /* ATZSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ATZSegmentedControl.h; path = Views/ATZSegmentedControl.h; sourceTree = "<group>"; };
 		8AF670C819C2DE8A00E1C168 /* ATZSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ATZSegmentedControl.m; path = Views/ATZSegmentedControl.m; sourceTree = "<group>"; };
+		F07E55501B551BA800161E61 /* ATZXcodePrefsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATZXcodePrefsManager.h; sourceTree = "<group>"; };
+		F07E55511B551BA800161E61 /* ATZXcodePrefsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATZXcodePrefsManager.m; sourceTree = "<group>"; };
 		F0DF961C1B40416300DF68CC /* ATZSegmentedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATZSegmentedCell.h; sourceTree = "<group>"; };
 		F0DF961D1B40416400DF68CC /* ATZSegmentedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATZSegmentedCell.m; sourceTree = "<group>"; };
+		FE4405511D6E3635000C58A4 /* NSImage+Alcatraz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Alcatraz.h"; sourceTree = "<group>"; };
+		FE4405521D6E3635000C58A4 /* NSImage+Alcatraz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Alcatraz.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +191,10 @@
 				890A4B41171F031300AFE577 /* Frameworks */,
 				890A4B40171F031300AFE577 /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
 		};
 		890A4B40171F031300AFE577 /* Products */ = {
 			isa = PBXGroup;
@@ -220,7 +228,6 @@
 				890A4B4C171F031300AFE577 /* Alcatraz.h */,
 				890A4B4D171F031300AFE577 /* Alcatraz.m */,
 				890A4B47171F031300AFE577 /* Supporting Files */,
-				6449530218CE826C009494BD /* ATZVersion.h */,
 			);
 			path = Alcatraz;
 			sourceTree = "<group>";
@@ -285,6 +292,8 @@
 				8917DA0C1726B57B00F0B2D2 /* NSFileManager+Alcatraz.m */,
 				8A1732A61A2694BB002033D6 /* NSColor+Alcatraz.h */,
 				8A1732A71A2694BB002033D6 /* NSColor+Alcatraz.m */,
+				FE4405511D6E3635000C58A4 /* NSImage+Alcatraz.h */,
+				FE4405521D6E3635000C58A4 /* NSImage+Alcatraz.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -302,6 +311,8 @@
 				8917DA171726B63B00F0B2D2 /* ATZShell.m */,
 				89B4F2BC172FF5AC001FD2E3 /* ATZPBXProjParser.h */,
 				89B4F2BD172FF5AC001FD2E3 /* ATZPBXProjParser.m */,
+				F07E55501B551BA800161E61 /* ATZXcodePrefsManager.h */,
+				F07E55511B551BA800161E61 /* ATZXcodePrefsManager.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -385,7 +396,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ATZ;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = supermar.in;
 			};
 			buildConfigurationList = 890A4B3A171F031300AFE577 /* Build configuration list for PBXProject "Alcatraz" */;
@@ -451,6 +462,7 @@
 				8AF670C919C2DE8A00E1C168 /* ATZSegmentedControl.m in Sources */,
 				8A6025C419C29B0C00D47F3F /* ATZPackageTableViewDelegate.m in Sources */,
 				8917DA071726B53000F0B2D2 /* ATZPluginInstaller.m in Sources */,
+				FE4405531D6E3635000C58A4 /* NSImage+Alcatraz.m in Sources */,
 				8917DA081726B53000F0B2D2 /* ATZProjectTemplateInstaller.m in Sources */,
 				8917DA091726B53000F0B2D2 /* ATZTemplateInstaller.m in Sources */,
 				8AA0F57D19C2225A00556AAF /* ATZStyleKit.m in Sources */,
@@ -466,6 +478,7 @@
 				8A1732A81A2694BB002033D6 /* NSColor+Alcatraz.m in Sources */,
 				894714E817302F63003CDDA7 /* ATZInstaller.m in Sources */,
 				897F7899173FC54C006C43E5 /* ATZAlcatrazPackage.m in Sources */,
+				F07E55521B551BA800161E61 /* ATZXcodePrefsManager.m in Sources */,
 				8A4C621A19C2D6F1003580BD /* ATZFilterBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +518,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -518,7 +532,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_MODULE_NAME = Alcatraz;
 				SDKROOT = macosx;
@@ -545,7 +559,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_MODULE_NAME = Alcatraz;
 				SDKROOT = macosx;
 			};
@@ -563,7 +577,7 @@
 				GCC_PREFIX_HEADER = "Alcatraz/Alcatraz-Prefix.pch";
 				INFOPLIST_FILE = "Alcatraz/Alcatraz-Info.plist";
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mneorr.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xcplugin;
@@ -582,7 +596,7 @@
 				GCC_PREFIX_HEADER = "Alcatraz/Alcatraz-Prefix.pch";
 				INFOPLIST_FILE = "Alcatraz/Alcatraz-Info.plist";
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mneorr.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = xcplugin;
